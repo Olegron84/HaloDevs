@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+  font-family: "Sarpanch", sans-serif;
+}
+
+html,
+body,
+.wrap {
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Sarpanch", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.wrap {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+div[class$=__container] {
+  width: 78.6%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+div[class$=__image],
+div[class$=-image] {
+  overflow: hidden;
+}
+
+img[class$=__img],
+img[class$=-img] {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
