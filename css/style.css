@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .animation {
   transition-duration: 1s;
 }
@@ -311,55 +310,46 @@ div[class$=-line] {
   opacity: 1;
 }
 
-/* THIRD BLOCK BY ANNA */
-div [class$=__preflist] { /*Налаштування блоку з характеристиками*/
-  display: flex;
-  position: relative;
-}
-
-.title { /* Центрування заголовків */
+.title {
   text-align: center;
   margin: 0 auto;
   width: 740px;
   padding: 10px;
 }
-
 .title__heading {
   font-size: 3rem;
   color: white;
 }
-
 .title__subheading {
   margin-top: 1rem;
   font-size: 1.25rem;
   color: #BDBDBD;
   font-weight: 100;
 }
-
-span[class$=__highlighted] { /*Хайлайтер заголовку*/
+.title__highlighted {
   color: #B9EE00;
 }
 
-div[class$=__image] { /*Позиціонування обгортки зоображень*/
+.main-ram-pref__preflist {
+  display: flex;
   position: relative;
 }
-
-div[class$=__img] { /*Налашування адаптивних зображень*/
+.main-ram-pref__image {
+  position: relative;
+}
+.main-ram-pref__img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-div[class*=__column] { /*Налашування колонок із зображеннями для адаптиву*/
+.main-ram-pref__column {
   display: flex;
   overflow: hidden;
   justify-content: center;
   width: 33, 33%;
 }
-
-/*DESKOP VERSION*/
-p[class*=__number] { /*Загальні налаштування тексту*/
+.main-ram-pref p[class*=__number] {
   position: absolute;
   margin: 0 auto;
   color: transparent;
@@ -367,51 +357,44 @@ p[class*=__number] { /*Загальні налаштування тексту*/
   -webkit-background-clip: text;
   text-shadow: 0 4px 50px rgba(200, 255, 0, 0.4745098039);
 }
-
-p[class$=_left] { /*Налашування кожного тексту окремо*/
+.main-ram-pref p[class$=_left] {
   font-size: 9.375rem;
   font-weight: bold;
   margin-top: 10%;
   margin-left: 12%;
 }
-
-p[class$=_center] {
+.main-ram-pref p[class$=_center] {
   font-size: 18.75rem;
   font-weight: bold;
 }
-
-p[class$=_right] {
+.main-ram-pref p[class$=_right] {
   font-size: 6.25rem;
   font-weight: bold;
   margin-top: 12%;
   margin-right: 12%;
 }
-
-span[class$=_left] { /*Налаштування одиниць вимірювання*/
+.main-ram-pref span[class$=_left] {
   display: block;
   text-align: center;
   font-size: 1.875rem;
   font-weight: 100;
   margin-top: -26%;
 }
-
-span[class$=_center] {
+.main-ram-pref span[class$=_center] {
   display: block;
   font-weight: 100;
   text-align: center;
   font-size: 3.75rem;
   margin-top: -26%;
 }
-
-span[class$=_right] {
+.main-ram-pref span[class$=_right] {
   display: block;
   text-align: center;
   font-size: 1.875rem;
   font-weight: 100;
   margin-top: -10%;
 }
-
-p[class*=__number-reflection_left] {
+.main-ram-pref p[class*=__number-reflection_left] {
   margin-top: 15%;
   transform: scale(1, -1);
   color: transparent;
@@ -419,8 +402,7 @@ p[class*=__number-reflection_left] {
   -webkit-background-clip: text;
   text-shadow: none;
 }
-
-p[class*=__number-reflection_center] {
+.main-ram-pref p[class*=__number-reflection_center] {
   margin-top: 10%;
   transform: scale(1, -1);
   color: transparent;
@@ -428,8 +410,7 @@ p[class*=__number-reflection_center] {
   -webkit-background-clip: text;
   text-shadow: none;
 }
-
-p[class*=__number-reflection_right] {
+.main-ram-pref p[class*=__number-reflection_right] {
   margin-top: 15.5%;
   transform: scale(1, -1);
   color: transparent;
@@ -437,5 +418,3 @@ p[class*=__number-reflection_right] {
   -webkit-background-clip: text;
   text-shadow: none;
 }
-
-/* END OF ANNA`s CODE*/
