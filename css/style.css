@@ -191,6 +191,7 @@ div[class$=-line] {
 
 .wrap__main-header {
   position: relative;
+  margin-bottom: 16.4rem;
 }
 
 .header__menu {
@@ -366,6 +367,10 @@ div[class$=-line] {
   margin-bottom: 1.875rem;
 }
 
+.wrap__main-ram-pref {
+  margin-bottom: 21.25rem;
+}
+
 .main-ram-pref-column {
   display: flex;
   flex-direction: column;
@@ -474,4 +479,183 @@ div[class$=-line] {
   -webkit-background-clip: text;
   text-shadow: 0px 4px 50px rgba(185, 238, 0, 0.5);
   font-size: 1.875rem;
+}
+
+.power__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.power__text-block {
+  color: #fff;
+  flex: 32% 0 1;
+  opacity: 0;
+  transform: translate(-60%);
+}
+.power__text-block.animation {
+  opacity: 1;
+  transform: translate(0);
+}
+.power__heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.power__heading span {
+  color: #B9EE00;
+}
+.power__text {
+  font-size: 1.25rem;
+}
+.power__image {
+  width: 150%;
+  height: 130%;
+  top: -20%;
+  left: -25%;
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+.power__image.animation {
+  opacity: 1;
+}
+
+.wrap__power {
+  position: relative;
+  margin-bottom: 24.125rem;
+}
+
+.power-graphic {
+  flex: 57.5% 0 1;
+}
+.power-graphic__content {
+  transform: translate(60%);
+  opacity: 0;
+  position: relative;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 9.5rem repeat(6, 6.875rem);
+  grid-template-rows: repeat(4, 6.875rem) auto;
+  grid-template-areas: " n models models models models models models" "text res res res res res res" "text res res res res res res" "text res res res res res res" "text number number number number number p";
+}
+.power-graphic__content.animation {
+  transform: translate(0);
+  opacity: 1;
+}
+.power-graphic__models, .power-graphic__games-section, .power-graphic__result-section, .power-graphic__numbers {
+  position: relative;
+  z-index: 2;
+}
+.power-graphic__content-section {
+  border: 0.5px solid #Fff;
+}
+.power-graphic__models {
+  grid-area: models;
+  grid-column: 2/4;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+.power-graphic__model {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #BDBDBD;
+}
+.power-graphic__model::before {
+  content: "";
+  display: block;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin-right: 0.3125rem;
+}
+.power-graphic__model:not(:last-child) {
+  margin-right: 1rem;
+}
+.power-graphic__model_old::before {
+  background-color: #323E2B;
+}
+.power-graphic__model_new::before {
+  background-color: #BDFF00;
+}
+.power-graphic__games-section {
+  grid-column: 1/2;
+  grid-row: 2/5;
+  grid-area: text;
+}
+.power-graphic__result-section {
+  grid-column: 2/8;
+  grid-area: res;
+}
+.power-graphic__numbers {
+  margin-top: 1.875rem;
+  grid-area: number;
+  display: flex;
+}
+.power-graphic__numbers li {
+  text-align: left;
+  font-size: 1rem;
+  color: #BDBDBD;
+}
+.power-graphic__numbers li:not(:last-child) {
+  flex: 20% 0 1;
+}
+.power-graphic__results {
+  height: 6.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.power-graphic__results .power-graphic__old-res {
+  width: 17%;
+}
+.power-graphic__results:nth-child(1) {
+  width: 100%;
+}
+.power-graphic__results:nth-child(1) .power-graphic__new-res {
+  width: 40%;
+}
+.power-graphic__results:nth-child(2) {
+  width: 100%;
+}
+.power-graphic__results:nth-child(2) .power-graphic__new-res {
+  width: 53%;
+}
+.power-graphic__results:nth-child(3) {
+  width: 100%;
+}
+.power-graphic__results:nth-child(3) .power-graphic__new-res {
+  width: 90%;
+}
+.power-graphic__new-res {
+  height: 2.5rem;
+  background-color: #B9EE00;
+  box-shadow: 5px 10px 86px 5px rgba(185, 238, 0, 0.75);
+}
+.power-graphic__old-res {
+  height: 2.5rem;
+  background-color: #323E2B;
+}
+.power-graphic__image {
+  z-index: 1;
+  position: absolute;
+  top: -1.4rem;
+  left: 8rem;
+  width: 44rem;
+  height: 30rem;
+}
+.power-graphic__game {
+  display: flex;
+  align-items: center;
+  height: 6.875rem;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 1rem;
+  color: #BDBDBD;
+}
+
+.power__graphic {
+  position: relative;
+  padding-right: 1.25rem;
 }
