@@ -178,6 +178,7 @@
   }
 .wrap__main-header{
   position: relative;
+  margin-bottom: 16.4rem;
 }
   .header{
     &__menu{
@@ -359,6 +360,9 @@
     }
   }
 }
+.wrap__main-ram-pref{
+  margin-bottom: 21.25rem;
+}
 .main-ram-pref-column{
   display: flex;
   flex-direction: column;
@@ -465,3 +469,191 @@
   }
 }
 // END OF ANNA`s CODE
+// Код Олега
+.power{
+  &__container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text-block{
+    color: #fff;
+    flex: 32% 0 1;
+    opacity: 0;
+    transform: translate(-60%);
+  }
+  &__text-block.animation{
+    opacity: 1;
+    transform: translate(0);
+  }
+  &__heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    span{
+      color: #B9EE00;
+    }
+  }
+  &__text{
+    font-size: 1.25rem;
+  }
+  &__image{
+    width: 150%;
+    height: 130%;
+    top: -20%;
+    left: -25%;
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+  }
+  &__image.animation{
+    opacity: 1;
+  }
+}
+.wrap__power{
+  position: relative;
+  margin-bottom: 24.125rem;
+}
+.power-graphic{
+  flex: 57.5% 0 1;
+  &__content{
+    transform: translate(60%);
+    opacity: 0;
+    position: relative;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: 9.5rem repeat(6, 6.875rem);
+    grid-template-rows: repeat(4, 6.875rem) auto;
+    grid-template-areas: " n models models models models models models"
+                          "text res res res res res res"
+                          "text res res res res res res"
+                          "text res res res res res res"
+                          "text number number number number number p";
+  }
+  &__content.animation{
+    transform: translate(0);
+    opacity: 1;
+  }
+  &__models, &__games-section, &__result-section, &__numbers{
+    position: relative;
+    z-index: 2;
+  }
+  &__content-section{
+    border: 0.5px solid #Fff;
+  }
+  &__models{
+    grid-area: models;
+    grid-column: 2 / 4;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+  &__model{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    color: #BDBDBD;
+    &::before{
+      content: "";
+      display: block;
+      width:0.625rem;
+      height:0.625rem;
+      margin-right: 0.3125rem;
+    }
+    &:not(:last-child){
+      margin-right: 1rem;
+    }
+  }
+  &__model_old{
+    &::before{
+      background-color: #323E2B;
+    }
+  }
+  &__model_new{
+    &::before{
+      background-color: #BDFF00;
+    }
+  }
+  &__games-section{
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    grid-area: text;
+  }
+  &__result-section{
+    grid-column: 2 / 8;
+    grid-area: res;
+
+  }
+  &__numbers{
+    margin-top: 1.875rem;
+    grid-area: number;
+    display: flex;
+    li{
+      text-align: left;
+      font-size: 1rem;
+      color: #BDBDBD;
+    }
+    li:not(:last-child){
+      flex: 20% 0 1;
+    }
+  }
+  &__results{
+    height: 6.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .power-graphic__old-res{
+      width: 17%;
+    }
+  }
+  &__results:nth-child(1){
+    width: 100%;
+    .power-graphic__new-res{
+      width: 40%;
+    }
+  }
+  &__results:nth-child(2){
+    width: 100%;
+    .power-graphic__new-res{
+      width: 53%;
+    }
+  }
+  &__results:nth-child(3){
+    width: 100%;
+    .power-graphic__new-res{
+      width: 90%;
+    }
+  }
+  &__new-res{
+    height: 2.5rem;
+    background-color: #B9EE00;
+    box-shadow: 5px 10px 86px 5px rgba(185,238,0,0.75);
+  }
+  &__old-res{
+    height: 2.5rem;
+    background-color: #323E2B;
+  }
+  &__image{
+    z-index: 1;
+    position: absolute;
+    top: -1.4rem;
+    left: 8rem;
+    width: 44rem;
+    height: 30rem;
+  }
+  &__game{
+    display: flex;
+    align-items: center;
+    height: 6.875rem;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 1rem;
+    color: #BDBDBD;
+  }
+}
+.power__graphic{
+  position: relative;
+  padding-right: 1.25rem;
+}
+// Код Олега
