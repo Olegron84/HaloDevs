@@ -29,6 +29,10 @@ ul {
   list-style-type: none;
 }
 
+.wrap__main {
+  flex: 1 1 auto;
+}
+
 .wrap {
   overflow: hidden;
   display: flex;
@@ -232,6 +236,7 @@ div[class$=-line] {
   color: #000;
 }
 .nav__order-button {
+  color: #000;
   background-color: #fff;
   font-size: 1.25rem;
   font-weight: 700;
@@ -312,8 +317,9 @@ div[class$=-line] {
 }
 
 .title-block {
+  margin: 0 auto;
   text-align: center;
-  max-width: 40.6%;
+  max-width: 48.6%;
   padding: 0 10px;
 }
 .title-block__heading {
@@ -658,4 +664,85 @@ div[class$=-line] {
 .power__graphic {
   position: relative;
   padding-right: 1.25rem;
+}
+
+.footer {
+  background-image: url(../img/footer/footer_img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 697px;
+}
+.footer .title-block {
+  margin-bottom: 10.375rem;
+  padding-top: 4.8125rem;
+}
+.footer__link {
+  font-size: 1.25rem;
+  color: #FFF;
+}
+.footer__link_home {
+  color: #000;
+}
+.footer__link, .footer__link_home {
+  transition-duration: 0.4s;
+  padding: 6px 17px 6px 18px;
+}
+.footer__link:hover {
+  background-color: #fff;
+}
+.footer__link:hover {
+  color: #000;
+}
+.footer__link_home {
+  background-color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.footer__link_home:hover {
+  background-color: #B9EE00;
+  cursor: pointer;
+}
+.footer__first-string {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.footer__logo {
+  flex: auto 1 1;
+}
+.footer__image {
+  height: 67%;
+  width: 67%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer__nav {
+  flex: auto 0 1;
+}
+.footer__list {
+  display: flex;
+  width: 100%;
+}
+.footer__element_first {
+  text-align: right;
+}
+.footer__element_first:not(:first-child) {
+  margin-left: 4.25rem;
+}
+.footer__second-string {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 4.69rem;
+  padding-bottom: 7.75rem;
+}
+.footer__element_second:first-child {
+  flex: auto 1 1;
+  text-align: left;
+  margin-left: 0;
+}
+.footer__element_second {
+  flex: auto 0 1;
+  text-align: right;
+  margin-left: 4.25rem;
 }
