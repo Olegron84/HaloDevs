@@ -7,7 +7,7 @@ function onEntry(entry) {
   }
   let options = { threshold: [0.5] };
   let observer = new IntersectionObserver(onEntry, options);
-  let elements = document.querySelectorAll(".main-header-content__text-block-number, .main-header-content__textblock, .main-header__characteristics, .main-ram-pref__title-block, .main-ram-pref-column__text-wrap, .main-ram-pref-column__image, .power-graphic__content, .power__image, .power__text-block");
+  let elements = document.querySelectorAll(".main-header-content__text-block-number, .main-header-content__textblock, .main-header__characteristics, .main-ram-pref__title-block, .main-ram-pref-column__text-wrap, .main-ram-pref-column__image, .power-graphic__content, .power__image, .power__text-block, .quality__background-image, .quality-column, .quality__title");
   for (let elm of elements) {
     observer.observe(elm);
   }

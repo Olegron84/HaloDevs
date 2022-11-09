@@ -103,7 +103,7 @@
       padding: 3px;
       transform: skew(30deg, 0) translate(50%);
       opacity: 0;
-      height: 2rem;
+      min-height: 2rem;
       background-color: rgba(255, 255, 255, 0.1);
       border-left: 5px solid white;
       border-bottom: 3px solid white;
@@ -299,6 +299,168 @@
       transform: translate(0,0);
       opacity: 1;
     }
+  }
+  .quality{
+    &__background-image{
+      width: 79.06rem;
+      height: 55.18rem;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      transform-origin: 25% 50%;
+      opacity: 0;
+      scale: 0.7;
+    }
+    &__background-image.animation{
+      opacity: 1;
+      scale: 1;
+    }
+    &__container{
+      width: 91.7% !important;
+      min-height: 61.6875rem;
+    }
+    &__title{
+      font-size: 3rem;
+      color: #fff;
+      margin: 0 auto;
+      max-width: 54%;
+      text-align: center;
+      margin-bottom: 12.0635rem;
+      transform: translate(0, 30%);
+      opacity: 0;
+      span{
+        color:#B9EE00;
+      }
+    }
+    &__title.animation{
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    &__columns{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .wrap__quality{
+    margin-bottom: 13.3125rem;
+    position: relative;
+  }
+  .quality-column{
+    display: grid;
+    grid-template-rows: max-content auto;
+    opacity: 0;
+    &:first-child{
+      flex: 35.4% 0 1;
+      grid-template-columns: fit-content(105px) 1fr;
+      grid-template-areas: "n lines" "number text";
+      column-gap: 1.4375rem;
+      transform: translate(-30%);
+      .quality-column__lines{
+        align-items: flex-end;
+      }
+      .quality-column__text-block{
+        padding-right: 1.4375rem;
+      }
+      .quality-column__text-section-text{
+        text-align: right;
+      }
+      .quality-column__bold-line::after{
+        transform-origin: 100% 0 0;
+        left: -2.375rem;
+        transform: rotate(-25deg);
+      }
+    }
+    &:last-child{
+      flex: 36.3% 0 1;
+      grid-template-columns:1fr fit-content(123px);
+      grid-template-areas: "lines n" "text number";
+      transform: translate(30%);
+      .quality-column__lines{
+        align-items: flex-start;
+      }
+      .quality-column__text-block{
+        padding-left: 1.4375rem;
+      }
+      .quality-column__text-section-text{
+        text-align: left;
+      }
+      .quality-column__bold-line::after{
+        transform-origin: 0 0 0;
+        right: -2.375rem;
+        transform: rotate(25deg);
+      }
+    }
+    &__lines{
+      align-self: start;
+      grid-area: lines;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.375rem;
+    }
+    &__number{
+      overflow: hidden;
+      align-self: start;
+      line-height: 0.8;
+      grid-area: number;
+      color: transparent;
+      background-clip: text;
+      background-image: linear-gradient(180deg, #FFFFFF 24.54%, rgba(255, 255, 255, 0) 123.47%);
+      font-size: 6.25rem;
+    }
+    &__text-block{
+      grid-area: text;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__thin-line{
+      width: 50%;
+      margin-bottom: 0.9rem;
+    }
+    &__bold-line{
+      width: 100%;
+      margin-bottom: 0.725rem;
+      position: relative;
+    }
+    &__bold-line::after{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      width: 2.375rem;
+      background-color: #fff;
+    }
+    &__text-block-section{
+      margin-bottom: 2.8125rem;
+    }
+    &__text-section-title{
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding-left: 2.5rem;
+      position: relative;
+    }
+    &__text-section-title:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 0;
+      height: 3px;
+      width: 2rem;
+      background-color: #B9EE00;
+    }
+    &__text-section-text{
+      color: #BDBDBD;
+      font-size: 1.125rem;
+    }
+  }
+  .quality-column.animation{
+    opacity: 1;
+    transform: translate(0);
   }
   // Заканчивается Код Олега
 
