@@ -77,7 +77,7 @@
     &__container{
       position: relative;
       z-index: 0;
-      min-height: 50.5vw;
+      min-height: calc(50.5vw - 20px);
       padding-bottom: 20px
     }
     &__header{
@@ -107,7 +107,7 @@
       padding: 3px;
       transform: skew(30deg, 0) translate(50%);
       opacity: 0;
-      height: 2rem;
+      min-height: 2rem;
       background-color: rgba(255, 255, 255, 0.1);
       border-left: 5px solid white;
       border-bottom: 3px solid white;
@@ -135,7 +135,7 @@
       &:nth-child(4) div{
         width: 42px;
         left: 0;
-        bottom:-109%;
+        bottom:-2rem;
         transform: translate(-67%) rotate(-45deg);
       }
       &:nth-child(4) div:after{
@@ -183,6 +183,7 @@
 .wrap__main-header{
   position: relative;
   margin-bottom: 16.4rem;
+  padding-bottom: 20px;
 }
   .header{
     &__menu{
@@ -419,7 +420,7 @@
       left: 0;
       color: transparent;
       background-clip: text;
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 367.75%);
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 500.75%);
       text-shadow: none;
       transform: scale(1, -1);
     }
@@ -434,7 +435,7 @@
       display: block;
       position: absolute;
       bottom: -7rem;
-      left: -16%;
+      left: -3rem;
       color: transparent;
       background-clip: text;
       background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 37.42%, rgba(255, 255, 255, 0.3) 600%);
@@ -522,14 +523,15 @@
 }
 .power-graphic{
   flex: 57.5% 0 1;
+  font-size: 1rem;
   &__content{
     transform: translate(60%);
     opacity: 0;
     position: relative;
     z-index: 0;
     display: grid;
-    grid-template-columns: 9.5rem repeat(6, 6.875rem);
-    grid-template-rows: repeat(4, 6.875rem) auto;
+    grid-template-columns: 9.5em repeat(6, 6.875em);
+    grid-template-rows: repeat(4, 6.875em) auto;
     grid-template-areas: " n models models models models models models"
                           "text res res res res res res"
                           "text res res res res res res"
@@ -555,19 +557,19 @@
     justify-self: center;
   }
   &__model{
-    font-size: 1rem;
+    font-size: 1em;
     display: flex;
     align-items: center;
     color: #BDBDBD;
     &::before{
       content: "";
       display: block;
-      width:0.625rem;
-      height:0.625rem;
-      margin-right: 0.3125rem;
+      width:0.625em;
+      height:0.625em;
+      margin-right: 0.3125em;
     }
     &:not(:last-child){
-      margin-right: 1rem;
+      margin-right: 1em;
     }
   }
   &__model_old{
@@ -591,12 +593,12 @@
 
   }
   &__numbers{
-    margin-top: 1.875rem;
+    margin-top: 1.875em;
     grid-area: number;
     display: flex;
     li{
       text-align: left;
-      font-size: 1rem;
+      font-size: 1em;
       color: #BDBDBD;
     }
     li:not(:last-child){
@@ -604,7 +606,7 @@
     }
   }
   &__results{
-    height: 6.875rem;
+    height: 6.875em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -631,29 +633,29 @@
     }
   }
   &__new-res{
-    height: 2.5rem;
+    height: 2.5em;
     background-color: #B9EE00;
     box-shadow: 5px 10px 86px 5px rgba(185,238,0,0.75);
   }
   &__old-res{
-    height: 2.5rem;
+    height: 2.5em;
     background-color: #323E2B;
   }
   &__image{
     z-index: 1;
     position: absolute;
-    top: -1.4rem;
-    left: 8rem;
-    width: 44rem;
-    height: 30rem;
+    top: -1.4em;
+    left: 8em;
+    width: 44em;
+    height: 30em;
   }
   &__game{
     display: flex;
     align-items: center;
-    height: 6.875rem;
+    height: 6.875em;
     text-align: right;
     padding-right: 10px;
-    font-size: 1rem;
+    font-size: 1em;
     color: #BDBDBD;
   }
 }
@@ -663,6 +665,7 @@
 }
 .quality{
   &__background-image{
+    z-index: -1;
     width: 79.06rem;
     height: 55.18rem;
     position: absolute;
@@ -841,7 +844,7 @@
   background-image: url(../img/footer/footer_img.png);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 697px;
+  min-height: 36.30vw;
   //Title
   &__title-block{
     margin-bottom: 10.375rem;
@@ -943,3 +946,91 @@
   }
 }
 // The end
+// Адаптив, код Олега
+@media screen and (max-width:1775px) {
+  html{
+    font-size: 0.9rem;
+  }
+  div[class^="wrap__"]:not(.wrap__power), main[class^="wrap__"]{
+    margin-bottom: 13rem;
+  }
+  .main-header{
+    &__container{
+      min-height: 45vw;
+    }
+    &__characteristics{
+      &:nth-child(4) div{
+        bottom:-2.2rem;
+      }
+    }
+  }
+  .main-ram-pref-column{
+    &__number_center{
+      &::after{
+        left: -2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width:1630px){
+  html{
+    font-size: 0.8rem;
+  }
+  .main-header{
+    &__characteristics{
+      &:nth-child(4) div{
+          bottom:-2.4rem;
+      }
+    }
+  }
+  .main-ram-pref-column{
+    &__number_center{
+      &::after{
+        left: -1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width:1470px){
+  html{
+    font-size: 0.7rem;
+  }
+  .bold-line{
+    height: 2px;
+  }
+  .main-header{
+    &__characteristics{
+      height: initial;
+      &:nth-child(4) div{
+        bottom:-2.6rem;
+    }
+    }
+  }
+  .main-ram-pref-column{
+    &__number{
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .quality-column{
+    &__bold-line::after{
+      height: 2px;
+    }
+  }
+  div[class^="wrap__"]:not(.wrap__power, .wrap__quality), main[class^="wrap__"]{
+    margin-bottom: 12rem;
+  }
+  .wrap__quality{
+    margin-bottom: 7rem !important;
+  }
+  .footer{
+    min-height: initial;
+    &__second-string{
+      padding-bottom: 6rem;
+    }
+    &__title-block{
+      margin-bottom: 8rem;
+    }
+  }
+}
