@@ -1034,3 +1034,41 @@
     }
   }
 }
+@media screen and (max-width:1300px){
+  html{
+    font-size: 0.65rem;
+  }
+  .main-header{
+    &__characteristics{
+      border-left: 3px solid white;
+      border-bottom: 2px solid white;
+      &:nth-child(4){
+        border-right: 3px solid white;
+      }
+      &:nth-child(4) div{
+        bottom:-3rem;
+    }
+    }
+  }
+  .main-header__header{
+    border-bottom: 2px solid #fff;
+  }
+  .bold-line{
+    height: 1.5px;
+  }
+  .quality-column__bold-line::after{
+    height: 1.5px;
+  }
+}
+@media screen and (max-width:1190px){
+  html{
+    font-size: 0.6rem;
+  }
+  .main-header{
+    &__characteristics{
+      &:nth-child(4) div{
+        bottom:-3.2rem;
+    }
+    }
+  }
+}
